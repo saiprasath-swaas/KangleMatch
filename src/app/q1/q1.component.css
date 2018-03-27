@@ -1,0 +1,52 @@
+
+#container {
+    border:1px solid #000000;
+    position:relative;
+    margin-left:45%;
+    margin-top: 10px;
+}
+#mycanvas {
+    width: 70px;
+    height: 180px;
+ }
+
+/* #mycanvas:hover {
+    transition: green 2s ease-in-out;
+} */
+#send {
+    position: relative;
+    top:50%;
+    margin-top:10px;
+}
+
+.mProgressContain 
+{
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    margin: 0;
+    text-align: center;
+    border: 1px solid black;
+}
+    
+    .mProgress0 
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+}
+    
+    .mProgress1 
+{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: green;
+}
+.progress  {  
+  transform: rotate(-90deg);
+}

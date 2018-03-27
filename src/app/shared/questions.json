@@ -1,0 +1,44 @@
+{
+    "Questions": 
+    [
+        {
+            "Id":"1",
+            "Category":"Single",
+            "QuestionName":"What is the percentage of Water in Earth ?",
+            "Options":[],
+            "Answer":"75%"
+        },
+        {
+            "Id":"2",
+            "Category":"Match",
+            "QuestionName":"Match the problem?",
+            "Options":[
+                {
+                    "QuestionId":"2",
+                    "QuestionName":"A",
+                    "AnswerId":"1",
+                    "Answer":"a"
+                },
+                {
+                    "QuestionId":"2",
+                    "QuestionName":"B",
+                    "AnswerId":"3",
+                    "Answer":"b"
+                },
+                {
+                    "QuestionId":"2",
+                    "QuestionName":"C",
+                    "AnswerId":"0",
+                    "Answer":"c"
+                },
+                {
+                    "QuestionId":"2",
+                    "QuestionName":"D",
+                    "AnswerId":"2",
+                    "Answer":"d"
+                }
+            ],
+            "Answer":""
+        }
+    ]
+}

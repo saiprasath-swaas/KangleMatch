@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row row-eq-height">
+        <div class="col-xs-1 col-sm-1 nopadding">
+            <div ngDraggable="true" *ngFor="let question of questionsArray;let i=index;" [attr.data-index]="i">
+                <button #question+{{i}} class="btn btn-default" (click)="onquestionSelected($event,i)" value="{{question}}" id="{{'question'+i}}">{{question}}</button><br>
+            </div>      
+        </div>
+        <div class="col-xs-5 col-sm-4 col-md-3 nopadding">
+            <canvas #canvas width="300"></canvas>
+        </div>
+        <div class="col-xs-1 col-sm-1 nopadding">
+            <div *ngFor="let answer of answersArray;let j=index;" [attr.data-index]="j">
+                <button #answer+{{j}} class="btn btn-default" style="margin-right:10px;" (click)="onanswerselected($event,j)" [disabled]="getDisabled(j)" value="{{answer}}" id="{{'answer'+j}}">{{answer}}</button>
+            </div>
+            
+        </div>
+    </div>
+    <div class="row nopadding">
+        <div class="col-xs-4 col-sm-3 col-md-2" style="padding:0;">
+            <button type="submit" class="btn btn-success" style="float:left;margin-right:15px;margin-left:0;" (click)="send()">Send</button>
+            <!-- <button type="reset" class="btn btn-success" style="float:left;position:relative;margin-left:0;" (click)="reset()">Reset {{question}}</button>         -->
+            <button type="reset" class="btn btn-success" style="float:left;margin-left:0;" (click)="resetAll()">Reset</button>
+        </div>
+    </div> 
+</div>

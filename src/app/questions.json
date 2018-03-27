@@ -1,0 +1,17 @@
+{
+    "Questions":
+    [
+        {
+            "Id":"1",
+            "QuestionId":"1",
+            "QuestionText":"What is the percentage of Water in Earth ?",
+            "Answer":"25"
+        },
+        {
+            "Id":"2",
+            "QuestionId":"2",
+            "QuestionText":"What is the percentage of Oxygen in Earth ?",
+            "Answer":"75"
+        }
+    ]
+}
