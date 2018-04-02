@@ -1,0 +1,18 @@
+.ng-draggable {
+    cursor: move;
+}
+ .btn-default {
+    margin-top: 15px;
+    width:100px;
+    height:50px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+.col-xs-3 div canvas {
+    margin-top: 15px;
+    display: block;
+}
+.nopadding {
+    padding-left:0;
+    padding-right:0;
+}

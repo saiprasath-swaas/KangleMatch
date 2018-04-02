@@ -1,0 +1,10 @@
+<div class="row">
+    <div class="col-xs-4 col-sm-3 col-md-2" style="padding:0;">
+        <button type="button" class="btn btn-primary" (click)="prev()">Previous</button>
+        <button type="submit" class="btn btn-success" (click)="send()" (ngModelChange)="change()">Send</button>    
+    </div>
+    <div class="col-xs-4 col-sm-3 col-md-2" style="padding:0;">
+        <button type="reset" class="btn btn-success" (click)="reset()" (ngModelChange)="change()">Reset</button>
+        <button type="button" class="btn btn-primary" (click)="next()">Next</button>
+    </div>
+</div>

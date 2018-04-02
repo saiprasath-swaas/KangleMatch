@@ -1,0 +1,4 @@
+
+<div *ngFor="let option of options;let j=index" [ngClass]="{'selectedcanvas':isSelected,'unselectedcanvas':!isSelected}">
+    <canvas #canvas+{{j}} width="150" height="90" (ngModelChange)="change()" (mouseup)="onMouseUp($event,j)" (mousedown)="onMouseDown($event,j)"></canvas>
+</div>

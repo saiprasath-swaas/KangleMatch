@@ -1,0 +1,7 @@
+.selectedcanvas {
+    border:3px solid #ddd;
+    box-shadow: 1px #ddd;
+}
+.unselectedcanvas {
+    border:1px solid #ddd;
+}

@@ -59,7 +59,7 @@ export class Q2Component implements OnInit {
     }
 
     onquestionSelected(args,index:number) {
-        
+        console.log("ccount:"+this.count);
         this.count++;
         if(this.questionIndex!=null) 
             this.prevQuestionIndex = this.questionIndex;
@@ -85,15 +85,11 @@ export class Q2Component implements OnInit {
                     this.elem.nativeElement.querySelector('#answer'+this.answerIndex).disabled = false;
                     this.cx.clearRect(0,0,this.convasEl.width,this.convasEl.height);
                     
-                    console.log("lineslength:"+this.lines.length);
                     this.lines.splice((this.lines.length-1),1);
-                    console.log("lineslength:"+this.lines.length);
-                    console.log("count:"+this.count);
                     this.reDrawAll(path);
                     this.drawPath(index);
                 }
                 else {
-                    console.log("count:"+this.count);
                     this.drawPath(index);
                     this.prevQuestionIndex = this.questionIndex;
                 }            
@@ -149,7 +145,7 @@ export class Q2Component implements OnInit {
             y2:y1,
             color:this.colorsArray[this.count]
         };
-        console.log(JSON.stringify(obj));
+        // console.log(JSON.stringify(obj));
 
         this.lines.push(obj);
         this.consindex.push(this.answerIndex);
@@ -169,7 +165,6 @@ export class Q2Component implements OnInit {
 
     reDrawAll(path:Path2D) {
         this.lines.forEach((element,i) => {
-            console.log("element.color"+element.color);
             path = new Path2D();
             this.cx.globalCompositeOperation = "source-in";
             path.moveTo(element.x1,element.y1);
@@ -207,7 +202,7 @@ export class Q2Component implements OnInit {
         this.lines = [];
         this.index = null;
         this.questionIndex = null;
-        this.count = 0;
+        this.count = -1;
         this.cx.restore();
     }
 

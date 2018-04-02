@@ -1,0 +1,16 @@
+<div class="container">
+    <h2>Arrange the following in Increasing Order of their Sizes.</h2><br>
+    <div *ngIf="isOptionsLoaded(Options,Options.length)" class="row row-eq-height">
+        <div class="col-xs-1 col-sm-1 col-md-1 nopadding">
+            <div *ngFor="let option of Options;let i=index">
+                <button #option+{{i}} ngDraggable="true" [inBounds]="true" class="btn btn-default" value="{{option}}" (started)="onDragBegin($event,i)" (stopped)="onDragStop($event,i)" [style.display]="disp">{{option}}</button>
+            </div>
+        </div>
+        <div class="col-xs-4 col-sm-3 col-md-2"></div>
+        <div  #slots class="col-xs-3 col-sm-1 nopadding" style="width:150px;">
+            <app-canvas [opts]="Options"></app-canvas>
+            <!-- <dropzone class="dropzone-container" [config]="config" [message]="Drop the Option here" (success)="onUploadSuccess($event)" (error)="onUploadError($event)"></dropzone> -->
+        </div>
+    </div>
+    <app-navigatebuttons (prevemit)="prev()" (nextemit)="next()" (sendemit)="send()" (resetemit)="resetAll()"></app-navigatebuttons>
+</div>
